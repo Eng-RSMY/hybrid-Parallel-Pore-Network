@@ -1,0 +1,31 @@
+environment
+#  graphics
+  tabular_graphics_data
+  tabular_graphics_file='f.dat'
+
+method
+  sampling
+    sample_type random
+    samples=50
+    seed = 17
+    response_levels =100
+
+model
+ single
+
+variables
+   uniform_uncertain = 2
+   lower_bounds      = .015  .003
+   upper_bounds      = .020  .005
+   descriptors     'x1' 'x2'
+
+interface
+   fork
+     analysis_driver = 'a.out'
+
+responses
+  response_functions = 1
+  no_gradients
+  no_hessians
+
+

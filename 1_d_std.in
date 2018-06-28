@@ -1,0 +1,30 @@
+environment
+#  graphics
+  tabular_data
+  tabular_data_file='f.dat' 
+  
+method
+  sampling
+    sample_type random
+    samples=20
+    seed = 17
+    response_levels =100
+
+model
+ single
+
+variables
+   lognormal_uncertain = 1
+   means              =  7.100e+3  
+   std_deviations     =  00.71e+3 
+   descriptors     'x1'   
+
+interface
+   fork
+     analysis_driver = 'exec'
+
+responses
+  response_functions = 1
+  no_gradients
+  no_hessians
+
